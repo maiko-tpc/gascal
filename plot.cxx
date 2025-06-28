@@ -13,8 +13,8 @@
 #include <TAxis.h>
 #include <TH1S.h>
 
-#include "MediumMagboltz.hh"
-#include "FundamentalConstants.hh"
+#include "Garfield/MediumMagboltz.hh"
+#include "Garfield/FundamentalConstants.hh"
 
 using namespace Garfield;
 using namespace std;
@@ -90,7 +90,7 @@ int main(int argc, char * argv[]){
   // input files
   /* 3 gas mix */
   if(argc == 9){
-  sprintf(gasfile, "gasfile/%s(%s)+%s(%s)+%s(%s)_%s.gas", 
+  sprintf(gasfile, "gasfile/%s_%s_%s_%s_%s_%s_%s.gas", 
 	  argv[1], argv[2], argv[3], argv[4], argv[5], argv[6], argv[7]);
 
   sprintf(gtitle, "%s(%s%) + %s(%s%) + %s(%s%) %s hPa", 
@@ -99,7 +99,7 @@ int main(int argc, char * argv[]){
 
   /* 2 gas mix */
   if(argc == 7){
-  sprintf(gasfile, "gasfile/%s(%s)+%s(%s)_%s.gas", 
+  sprintf(gasfile, "gasfile/%s_%s_%s_%s_%s.gas", 
 	  argv[1], argv[2], argv[3], argv[4], argv[5]);
 
   sprintf(gtitle, "%s(%s%) + %s(%s%) %s hPa", 
@@ -108,7 +108,7 @@ int main(int argc, char * argv[]){
 
   /* 1 gas mix */
   if(argc == 5){
-  sprintf(gasfile, "gasfile/%s(%s)_%s.gas", 
+  sprintf(gasfile, "gasfile/%s_%s_%s.gas", 
 	  argv[1], argv[2], argv[3]);
 
   sprintf(gtitle, "%s(%s%)_%s hPa", 

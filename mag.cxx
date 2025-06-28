@@ -11,8 +11,8 @@
 #include <TROOT.h>
 #include <TApplication.h>
 
-#include "MediumMagboltz.hh"
-#include "FundamentalConstants.hh"
+#include "Garfield/MediumMagboltz.hh"
+#include "Garfield/FundamentalConstants.hh"
 
 using namespace Garfield;
 using namespace std;
@@ -86,28 +86,28 @@ int main(int argc, char *argv[]){
 
   /* 3 gas mix */
   if(argc == 8){
-  sprintf(gasfile, "gasfile/%s(%s)+%s(%s)+%s(%s)_%s.gas", 
+  sprintf(gasfile, "gasfile/%s_%s_%s_%s_%s_%s_%s.gas", 
 	  argv[1], argv[2], argv[3], argv[4], argv[5], argv[6], argv[7]);
 
-  sprintf(datfile, "dat/%s(%s)+%s(%s)+%s(%s)_%s.dat",     
+  sprintf(datfile, "dat/%s_%s_+%s_%s_%s_%s_%s.dat",     
 	  argv[1], argv[2], argv[3], argv[4], argv[5], argv[6], argv[7]);
   }
 
   /* 2 gas mix */
   if(argc == 6){
-  sprintf(gasfile, "gasfile/%s(%s)+%s(%s)_%s.gas", 
+  sprintf(gasfile, "gasfile/%s_%s_%s_%s_%s.gas", 
 	  argv[1], argv[2], argv[3], argv[4], argv[5]);
 
-  sprintf(datfile, "dat/%s(%s)+%s(%s)_%s.dat",     
+  sprintf(datfile, "dat/%s_%s_%s_%s_%s.dat",     
 	  argv[1], argv[2], argv[3], argv[4], argv[5]);
   }
 
   /* 1 gas mix */
   if(argc == 4){
-  sprintf(gasfile, "gasfile/%s(%s)_%s.gas", 
+  sprintf(gasfile, "gasfile/%s_%s_%s.gas", 
 	  argv[1], argv[2], argv[3]);
 
-  sprintf(datfile, "dat/%s(%s)_%s.dat",     
+  sprintf(datfile, "dat/%s_%s_%s.dat",     
 	  argv[1], argv[2], argv[3]);
   }
 
