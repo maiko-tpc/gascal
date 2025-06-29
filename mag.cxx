@@ -22,8 +22,8 @@ int main(int argc, char *argv[]){
   
   // Magboltz configuration
   const int nFields = 40;
-  const double emin = 100.;
-  const double emax = 2000.;
+  const double emin = 10.;
+  const double emax = 500.;
   const double temperature = 293.15;  
   const bool useLog = false;
   const int ncoll = 10;
